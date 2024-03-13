@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100vh;
+  font-family: cursive;
+  flex-direction: column;
+  background: #23242a;
+}
+
+.box {
+  position: relative;
+  width: auto;
+  height: auto;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 5%;
+}
+
+/* .box::before,
+.box::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 550px;
+  height: 770px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #ff90bc, #ff90bc);
+  animation: animate 6s linear infinite;
+}
+
+.box::after {
+  animation-delay: -3s;
+} */
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+form {
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 50px 40px;
+  border-radius: 8px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #ff90bc;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+h3 {
+  color: #ff90bc;
+  font-weight: 500;
+
+  letter-spacing: 0.1em;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox input,
+.inputBox textarea,
+.inputBoxDate input[type="date"] {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox textarea:valid ~ span,
+.inputBox input:focus ~ span,
+.inputBox textarea:focus ~ span,
+.inputBoxDate input:valid ~ span,
+.inputBoxDate input:focus ~ span {
+  color: #ff90bc;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i,
+.inputBoxDate i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 150%;
+  height: 2px;
+  background: #ff90bc;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i,
+.inputBox textarea:valid ~ i,
+.inputBox textarea:focus ~ i,
+.inputBoxDate input:valid ~ i,
+.inputBoxDate input:focus ~ i {
+  height: 44px;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  margin: 10px 0;
+  font-size: 0.75em;
+  color: #8f8f8f;
+}
+
+.links a:hover,
+.links a:nth-child(2) {
+  color: #ff90bc;
+}
+
+input[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #ff90bc;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 600;
+  width: 200px;
+  margin-top: 10px;
+}
+
+input[type="submit"]:active {
+  opacity: 0.8;
+}
+
+.inputBoxDate {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBoxDate input[type="date"] {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: #ff90bc;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.inputBoxDate span {
+  position: absolute;
+  left: 0;
+  padding: 20px 0px 10px;
+  pointer-events: none;
+  font-size: 1em;
+  color: #8f8f8f;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBoxDate input:valid ~ span,
+.inputBoxDate input:focus ~ span {
+  color: #ff90bc;
+  transform: translateX(0px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBoxDate i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #ff90bc;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBoxDate input:valid ~ i,
+.inputBoxDate input:focus ~ i {
+  height: 44px;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.infoBox {
+  position: relative;
+  width: 550px;
+  height: 200px;
+  background: #1c1c1c;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 5%;
+}
+.person-image {
+  width: 390px;
+  height: auto;
+  position: absolute;
+
+  left: 0%;
+
+  z-index: 3;
+}
+
+.infoBox::before,
+.infoBox::after {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 550px;
+  height: 770px;
+  transform-origin: bottom right;
+  background: linear-gradient(0deg, transparent, #ff90bc, #ff90bc);
+  animation: animate 6s linear infinite;
+}
+
+.infoBox::after {
+  animation-delay: -3s;
+}
+
+.infoContent {
+  position: absolute;
+  inset: 2px;
+  background: #28292d;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+.infoContent h2 {
+  color: #ff90bc;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.infoContent p {
+  color: #8f8f8f;
+  font-size: 1em;
+  margin-top: 10px;
+}
+.itemBox p {
+  color: #8f8f8f;
+  font-size: 1em;
+  margin-top: 10px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: left;
+}
+
+th,
+td {
+  padding: 12px;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+th {
+  background-color: #1c1c1c;
+  color: #ff90bc;
+  font-weight: bold;
+}
+
+td {
+  background-color: #28292d;
+  color: #fff;
+}
+
+tr:hover {
+  background-color: #38393d;
+}
+
+p {
+  color: #ff90bc;
+}
+.pinjam-btn {
+  background-color: #ff90bc;
+  color: #23242a;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pinjam-btn:hover {
+  background-color: #d870a9;
+}
+a[type="submit"] {
+  border: none;
+  outline: none;
+  padding: 11px 25px;
+  background: #ff90bc;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 600;
+  width: 200px;
+  margin-top: 10px;
+}
+a[type="submit"]:active {
+  opacity: 0.8;
+}
