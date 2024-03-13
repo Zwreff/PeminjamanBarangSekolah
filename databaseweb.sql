@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 13, 2024 at 07:57 AM
+-- Generation Time: Mar 13, 2024 at 08:10 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -71,8 +71,7 @@ INSERT INTO `transaksi` (`id_transaksi`, `kode_barang`, `nis`, `tanggal_pinjam`)
 (11, '90101', '222316070059', '2024-03-10'),
 (12, '90101', '222316070059', '2024-03-10'),
 (13, '90202', '222316070059', '2024-03-10'),
-(19, '90202', '222316070059', '2024-03-12'),
-(20, '90101', '1212121', '2024-03-12');
+(19, '90202', '222316070059', '2024-03-12');
 
 -- --------------------------------------------------------
 
@@ -96,8 +95,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id_login`, `nis`, `nama`, `status`, `username`, `password`, `role`) VALUES
 (1, '666666666666', 'DARK MAGICIAN ZEREF', 'Raja Iblis', 'admin', 'fae0b27c451c728867a567e8c1bb4e53', 'admin'),
-(11, '222316070059', 'Muhammad Riefan', 'Pelajar XI PPLG 3', 'riefan', 'fae0b27c451c728867a567e8c1bb4e53', 'user'),
-(19, '1212121', 'kontol', NULL, 'wewe', '2a7d544ccb742bd155e55c796de8e511', NULL);
+(11, '222316070059', 'Muhammad Riefan', 'Pelajar XI PPLG 3', 'riefan', 'fae0b27c451c728867a567e8c1bb4e53', 'user');
 
 --
 -- Indexes for dumped tables
